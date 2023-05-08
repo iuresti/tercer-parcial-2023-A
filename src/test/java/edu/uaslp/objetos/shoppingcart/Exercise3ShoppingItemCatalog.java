@@ -28,6 +28,8 @@ public class Exercise3ShoppingItemCatalog {
 
     }
 
+    }
+
     @Test
     public void givenANotValidCode_whenGetItem_thenNullIsReturned(){
         // Given:
@@ -40,7 +42,7 @@ public class Exercise3ShoppingItemCatalog {
         String itemCode = "9785";
 
         // Then:
-        assertThatThrownBy(() ->shoppingCart.add(itemCode))
+        assertThatThrownBy(() ->shoppingItemCatalog.catalog.containskey(itemCode))
                 .isInstanceOf(ItemNotFoundException.class)
                 .isInstanceOf(ShoppingCartException.class)
                 .isInstanceOf(RuntimeException.class)
